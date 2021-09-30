@@ -1,0 +1,27 @@
+{
+    "slug": "cta",
+    "title": "CTA",
+    "desc": "Carrossel de banners",
+    "icon": " bi bi-flag",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Banners"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "cfblock/banner" ],
+            "label": "Banners"
+        }
+    ],
+    "children": [
+        {
+            "path": "banner/"
+        }
+    ]
+}

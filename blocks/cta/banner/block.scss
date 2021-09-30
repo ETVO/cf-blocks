@@ -1,0 +1,103 @@
+.cf-banner {
+
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 70vh;
+    
+    color: white !important;
+
+    img {
+
+        background-size: contain;
+        background-position: center bottom;
+    }
+
+    .overlay { 
+        background-color: rgba(#000000, .2);
+    }
+
+    .banner-content {
+
+        &:not(.invert-align) { 
+            margin-right: 250px;
+            margin-left: auto;
+        }
+
+        &.invert-align {
+            margin-right: auto;
+            margin-left: 250px;
+        }
+
+        .title {
+            font-family: 'RebellionKnight' !important;
+    
+            text-shadow: 0px 0px 10px rgba(#000, .6);
+            
+            font-size: 70px;
+            margin: 0;
+        }
+    
+        .subtitle {
+            text-transform: uppercase;
+            font-weight: 200;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+    
+        .action a {
+            border-radius: 5px;
+            padding: 10px 30px;
+            
+            background: linear-gradient(90deg, #FFC038, #FF6D13);
+            color: white !important;
+            
+            font-size: .75rem;
+    
+            transition: background-color .2s;
+    
+            &:hover, &:active, &:focus {
+                background-color: #12265C;
+            }
+        }
+    }
+
+}
+
+@media all and (min-width: 1440px) {
+    
+    
+    .cf-banner {
+        .banner-content {
+            &:not(.invert-align) { 
+                margin-right: 20vw;
+            }
+
+            &.invert-align {
+                margin-left: 20vw;
+            }
+        }
+    }
+    
+}
+
+@media all and (min-height: 1024px) {
+    
+    .cf-banner {
+        height: 50vh;
+    }
+}
+
+
+@media all and (max-width: 991px) {
+    
+    
+    .cf-banner {
+        .banner-content {
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+    }
+    
+}

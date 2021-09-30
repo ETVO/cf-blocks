@@ -1,0 +1,27 @@
+{
+    "slug": "locais",
+    "title": "Locais",
+    "desc": "Locais de investimento",
+    "icon": " bi bi-map",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Locais"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "cfblock/local" ],
+            "label": "Locais"
+        }
+    ],
+    "children": [
+        {
+            "path": "local/"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+@import './local/block';
+
+.cf-locais {
+    .title {
+        .muted {
+            color: #7F8298;
+            font-weight: normal;
+        }
+    }
+
+    .items { 
+        border-bottom: solid 2px #E5E7ED;
+    }
+}
