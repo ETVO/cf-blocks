@@ -1,0 +1,49 @@
+.cf-sobre {
+    .image {
+        margin-bottom: 40px;
+        img {
+            width: 90%;
+
+            margin-left: 0 !important; 
+        }
+    }
+
+    .desc {
+        color: #4C516F;
+
+        &::after {
+            margin-top: 40px;
+            content: '';
+
+            display: block;
+
+            width: 200px;
+            height: 5px;
+
+            border-radius: 3px;
+            background-color: #E5E7ED;
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    .cf-sobre {
+        .image {
+            img {
+                margin-left: auto !important;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    .cf-sobre {
+        .image {
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

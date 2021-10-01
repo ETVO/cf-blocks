@@ -7,6 +7,12 @@
         },
         {
             "path": "./locais/"
+        },
+        {
+            "path": "./sobre/"
+        },
+        {
+            "path": "./culturas/"
         }
     ]
 }

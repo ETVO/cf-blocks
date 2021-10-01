@@ -481,8 +481,10 @@ import data from "./blocks.json";
             else if (type == "inner") {
                 var blocks = element.blocks;
 
+                if(typeof blocks == 'undefined') blocks = true;
+
                 inputContent =
-                    <Fragment>
+                <Fragment>
                         <BaseControl
                             label={label}
                             help={help}>

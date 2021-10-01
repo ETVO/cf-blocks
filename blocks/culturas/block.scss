@@ -1,0 +1,11 @@
+@import './cultura/block.scss';
+
+.cf-culturas {
+    .block-title {
+        h1, h2, h3 {
+            color: #10109E;
+            font-weight: 600;
+            font-size: calc(1.5rem + 0.9vw);
+        }
+    }
+}

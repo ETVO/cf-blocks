@@ -1,0 +1,34 @@
+{
+    "slug": "cultura",
+    "title": "(Culturas) Cultura",
+    "desc": "Título e descrição",
+    "icon": " bi bi-file-text",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "desc": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "desc",
+            "label": "Descrição"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "slug": "culturas",
+    "title": "Culturas",
+    "desc": "Missão, Visão e Valores",
+    "icon": " bi bi-layout-three-columns",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Culturas"
+        },
+        {
+            "tag": "input",
+            "type": "template",
+            "blocks": [ "cfblock/cultura" ],
+            "template": [[ "cfblock/cultura" ], [ "cfblock/cultura" ], [ "cfblock/cultura" ]],
+            "templateLock": "all",
+            "label": "Culturas"
+        }
+    ],
+    "children": [
+        {
+            "path": "cultura/"
+        }
+    ]
+}

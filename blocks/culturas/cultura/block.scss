@@ -1,0 +1,34 @@
+
+
+.cf-cultura {
+        
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .cultura-inner {
+        border: solid 1px #B6B6E2;
+        border-radius: 10px;
+        padding: 40px 20px;
+
+        flex: 1 1 auto;
+        display: flex;
+
+        .content {
+
+            .title {
+                margin-top: auto;
+                h1, h2, h3, h4 {
+                    font-size: calc(2.25rem + 0.9vw);
+                    color: #10109E;
+                }
+            }
+
+            .desc {
+                margin-bottom: auto;
+                color: #4C516F;
+            }
+        }
+    }
+}
