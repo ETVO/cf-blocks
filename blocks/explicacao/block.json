@@ -1,0 +1,33 @@
+{
+    "slug": "explicacao",
+    "title": "Explicação",
+    "desc": "Título e texto",
+    "icon": " bi bi-text-center",
+    "categ": "cfblock",
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "text": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "text",
+            "label": "Texto"
+        }
+    ]
+}

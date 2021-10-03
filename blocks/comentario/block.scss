@@ -1,0 +1,24 @@
+
+.cf-comentario {
+    .desc {
+        width: 65%;
+        color: #4C516F;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .cf-comentario {
+        .image {
+            img {
+                max-height: 400px;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+        .desc {
+            padding-top: 20px;
+            width: auto;
+        }
+    }
+}

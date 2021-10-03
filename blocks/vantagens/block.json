@@ -1,0 +1,27 @@
+{
+    "slug": "vantagens",
+    "title": "Vantagens",
+    "desc": "Principais vantagens",
+    "icon": " bi bi-grid-3x2-gap",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Vantagens"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "cfblock/vantagem" ],
+            "label": "Locais"
+        }
+    ],
+    "children": [
+        {
+            "path": "vantagem/"
+        }
+    ]
+}

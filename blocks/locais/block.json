@@ -14,8 +14,16 @@
         },
         {
             "tag": "input",
-            "type": "inner",
+            "type": "template",
             "blocks": [ "cfblock/local" ],
+            "template": [
+                [ "cfblock/local" ], 
+                [ "cfblock/local" ], 
+                [ "cfblock/local" ], 
+                [ "cfblock/local" ], 
+                [ "cfblock/local" ]
+            ],
+            "templateLock": "insert",
             "label": "Locais"
         }
     ],

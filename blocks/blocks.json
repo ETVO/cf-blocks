@@ -13,6 +13,15 @@
         },
         {
             "path": "./culturas/"
+        },
+        {
+            "path": "./comentario/"
+        },
+        {
+            "path": "./explicacao/"
+        },
+        {
+            "path": "./vantagens/"
         }
     ]
 }
