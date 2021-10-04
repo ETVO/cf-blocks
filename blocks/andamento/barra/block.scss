@@ -1,0 +1,33 @@
+.cf-barra {
+    width: 100%;
+    .caption {
+        color: #001659;
+        font-weight: 600;
+    }
+    .progbar {
+        height: 15px;
+        background-color: #e4e7f0;
+
+        .prog {
+            .prog-color {
+                height: 100%;
+                display: block;
+                background: linear-gradient(270deg, #FFC038, #FF6D13);
+
+                animation: fillProg ease 2s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes fillProg {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

@@ -39,7 +39,7 @@
 
                 // Don't generate indicators if it already has them 
                 // OR if it has them disabled
-                var addIndicators = !$(this).find(".carousel-indicators") 
+                var addIndicators = !$(this).find(".carousel-indicators").length 
                     && $(this).attr("data-custom-indicators") != "false";
 
                 var $items = $(this).find(".carousel-item");
@@ -50,11 +50,11 @@
 
                 if($items.length <= 1) {
                     var $prev;
-                    if($prev = $(this).find('.carousel-control-prev').get(0))
+                    if(($prev = $(this).find('.carousel-control-prev').get(0)).length)
                         $prev.hide();
                         
                     var $next;
-                    if($next = $(this).find('.carousel-control-next').get(0))
+                    if(($next = $(this).find('.carousel-control-next').get(0)).length)
                         $next.hide();
                 }
 

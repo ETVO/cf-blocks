@@ -1,0 +1,73 @@
+@import './barra/block.scss';
+
+.cf-andamento {
+
+    .title {
+        h1, h2, h3 {
+            color: #10109E;
+            font-weight: 600;
+        }
+    }
+
+    .image {
+        img {
+            object-fit: cover;
+            min-height: 100%;
+        }
+    }
+
+    .content-wrap {
+        display: flex;
+        max-width: 100%;
+
+        .content {
+            margin: auto;
+            margin-left: 75px;
+            width: 350px;
+            max-width: 100%;
+        }
+    }
+}
+
+@media all and (max-width:992px) {
+    .cf-andamento {
+        .image {
+            img {
+                max-height: 400px;
+            }
+        }
+
+        .content-wrap {
+            .content {
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media all and (max-width:767.99px) {
+    .cf-andamento {
+        .image {
+            img {
+                max-height: 350px;
+            }
+        }
+    }
+}
+
+@media all and (max-width:575.99px) {
+    .cf-andamento {
+        .image {
+            img {
+                max-height: 300px;
+            }
+        }
+
+        .content-wrap {
+            .content {
+                max-width: 500px;
+            }
+                
+        }
+    }
+}

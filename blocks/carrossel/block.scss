@@ -1,0 +1,60 @@
+
+
+.cf-carrossel {
+    .carousel-indicators {
+        button {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: solid 1px white;
+
+            &.active {
+                background-color: white;
+                border: solid 1px #10109E;
+            }
+        }
+    }
+
+    .carousel-control {
+
+        &-prev, 
+        &-next {
+            width: 7.5%;
+
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                
+                font-size: 25px;
+                color: #fff !important;
+                font-family: bootstrap-icons;
+                font-weight: bolder;
+
+                background-image: none;
+            }
+
+            .carousel-control-prev-icon::before {    
+                content: "\f284";         
+            }
+
+            .carousel-control-next-icon::before {
+                content: "\f285"; 
+            }
+
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    .cf-carrossel {
+        
+
+        .carousel-control {
+
+            &-prev, 
+            &-next {
+                width: unset;
+            }
+        }
+    }   
+}

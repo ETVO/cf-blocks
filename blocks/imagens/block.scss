@@ -1,0 +1,173 @@
+
+.cf-imagens {
+    & > .container {
+        border-bottom: solid 2px #E5E7ED;
+    }
+
+    .heading {
+        .title {
+            h1, h2, h3 {
+                color: #10109E;
+                font-weight: 600;
+            }
+        }
+        .subtitle {
+            h2, h3, h4, h5, h6 {
+                color: #4C516F;
+            }
+        }
+    }
+
+    .carousel {
+        position: relative;
+        
+        .carousel-control {
+            &-prev,
+            &-next {
+                width: 40px;
+                top: 50%;
+                bottom: 50%;
+
+                opacity: 1;
+
+                .carousel-control-next-icon,
+                .carousel-control-prev-icon {
+                    transition: opacity .2s;
+                    
+                    font-size: 20px;
+                    color: #10109E !important;
+                    font-family: bootstrap-icons;
+                    font-weight: bolder;
+
+                    background-image: none;
+                    
+                    display: flex;
+                    
+                    transition: color .1s;
+
+                    &:hover, &:active, &:focus {
+                        color: #FF6D13 !important;
+                    }
+                }
+
+                .carousel-control-prev-icon::before {    
+                    content: "\f284";
+                    margin: auto;
+                }
+
+                .carousel-control-next-icon::before {
+                    content: "\f285";
+                    margin: auto;
+                }
+            }
+    
+            &-prev {
+                left: -40px;
+            }
+    
+            &-next {
+                right: -40px;
+            }
+
+            
+        }
+
+        .carousel-inner {
+            .carousel-item {
+                .item-inner {
+                    display: flex;
+                    
+                    .slide-img {
+                        margin: auto;
+                        
+                        width: 300px;
+                        max-width: 100%;
+                        height: 300px;
+                        max-height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+        .carousel-indicators {
+            position: relative;
+
+            .indicators-wrap {
+                display: flex;
+                .indicators-inner {
+                    margin: auto;
+                }
+            }
+            button {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: transparent;
+                border: solid 1px #10109E;
+
+                transition: background-color .2s;
+
+                &.active {
+                    background-color: #10109E;
+                    border: solid 1px #10109E;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1100px) {
+    .cf-imagens {
+        .carousel {
+
+            .carousel-control {
+        
+                &-prev {
+                    left: 0.75rem;
+                }
+        
+                &-next {
+                    right: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:768px) {
+    .cf-imagens {
+        .carousel {
+
+            .carousel-control {
+                &-prev,
+                &-next {
+
+                    .carousel-control-next-icon,
+                    .carousel-control-prev-icon {
+                        background-color: rgba(white, .6);
+                        border-radius: 50%;
+                    }
+                       
+                }
+        
+                &-prev {
+                    left: 25px;
+                }
+        
+                &-next {
+                    right: 25px;
+                }
+            }
+            
+            .carousel-inner {
+                .carousel-item {
+                    .item-inner {
+                        padding: 0;
+                    }
+                }
+            }
+        } 
+    }
+}

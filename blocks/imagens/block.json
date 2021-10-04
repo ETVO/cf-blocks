@@ -1,0 +1,46 @@
+{
+    "slug": "imagens",
+    "title": "Imagens",
+    "desc": "Título, descrição e imagens",
+    "icon": " bi bi-images",
+    "categ": "cfblock",
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "images": {
+            "type": "array"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "subtitle",
+            "label": "Subtítulo"
+        },
+        {
+            "tag": "title",
+            "title": "Imagens"
+        },
+        {
+            "tag": "input",
+            "type": "gallery",
+            "attr": "images",
+            "label": "Imagens"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "slug": "venha",
+    "title": "Venha",
+    "desc": "Título, subtítulo, endereço e texto",
+    "icon": " bi bi-text-center",
+    "categ": "cfblock",
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "address": {
+            "type": "string"
+        },
+        "text": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "subtitle",
+            "label": "Subtítulo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "text",
+            "label": "Texto"
+        },
+        {
+            "tag": "title",
+            "title": "Endereço"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "address",
+            "label": "Endereço"
+        }
+
+    ]
+}

@@ -22,6 +22,24 @@
         },
         {
             "path": "./vantagens/"
+        },
+        {
+            "path": "./carrossel/"
+        },
+        {
+            "path": "./beleza/"
+        },
+        {
+            "path": "./imagens/"
+        },
+        {
+            "path": "./andamento/"
+        },
+        {
+            "path": "./caracteristicas/"
+        },
+        {
+            "path": "./venha/"
         }
     ]
 }

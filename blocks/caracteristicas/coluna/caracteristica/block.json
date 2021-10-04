@@ -1,0 +1,29 @@
+{
+    "slug": "caracteristica",
+    "title": "(Características) Característica",
+    "desc": "Ícone e descrição",
+    "icon": " bi bi-layout-split",
+    "categ": "cfblock",
+    "attrs": {
+        "icon": {
+            "type": "string"
+        },
+        "desc": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "input",
+            "type": "image",
+            "attr": "icon",
+            "label": "Ícone"        
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "desc",
+            "label": "Descrição"        
+        }
+    ]
+}

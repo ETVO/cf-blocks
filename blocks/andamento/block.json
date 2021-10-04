@@ -1,0 +1,40 @@
+{
+    "slug": "andamento",
+    "title": "Andamento",
+    "desc": "Imagem e barras",
+    "icon": " bi bi-arrow-right",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+        "image": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "label": "Imagem"        
+        },
+        {
+            "tag": "input",
+            "type": "image",
+            "attr": "image",
+            "label": "Imagem"        
+        },
+        {
+            "tag": "title",
+            "label": "Barras"        
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "cfblock/barra" ],
+            "label": "Barras"
+        }
+    ],
+    "children": [
+        {
+            "path": "barra/"
+        }
+    ]
+}

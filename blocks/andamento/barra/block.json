@@ -1,0 +1,30 @@
+{
+    "slug": "barra",
+    "title": "(Andamento) Barra",
+    "desc": "Texto e número",
+    "icon": " bi bi-arrow-right",
+    "categ": "cfblock",
+    "attrs": {
+        "name": {
+            "type": "string"
+        },
+        "progress": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "name",
+            "label": "Nome"        
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "progress",
+            "label": "Progresso",
+            "help": "Insira somente o número aproximado, sem símbolos"        
+        }
+    ]
+}

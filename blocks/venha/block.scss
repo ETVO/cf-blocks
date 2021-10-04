@@ -1,0 +1,53 @@
+
+.cf-venha {
+    min-height: 400px;
+
+    .map {
+
+    }
+
+    .content {
+        display: flex;
+
+        .content-inner {
+            margin: 80px auto 60px 40px;
+            width: 70%;
+            max-width: 100%;
+        }
+
+        .subtitle {
+            h4, h5, h6 {
+                color: #4C516F;
+                font-weight: 300;
+            }
+        }
+        .title {
+            h1, h2, h3, h4 {
+                color: #10109E;
+                font-size: calc(1.75rem + 0.9vw);
+            }
+        }
+
+        .address {
+            span {
+                color: #4C516F;
+                font-weight: 600;
+            }
+            .bi {
+                color: #10109E;
+                -webkit-text-stroke: 1px #10109E;
+            }
+        }
+
+        .separator {
+            display: block;
+            border-radius: 3px;
+            height: 4px;
+            background-color: #E5E7ED;
+        }
+
+        .text {
+            color: #4C516F;
+        }
+    }
+}

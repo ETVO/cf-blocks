@@ -1,0 +1,49 @@
+{
+    "slug": "caracteristicas",
+    "title": "Características",
+    "desc": "Título, texto, colunas",
+    "icon": " bi bi-layout-split",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "desc": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "desc",
+            "label": "Descrição"
+        },
+        {
+            "tag": "title",
+            "title": "Culturas"
+        },
+        {
+            "tag": "input",
+            "type": "template",
+            "template": [[ "cfblock/coluna" ], [ "cfblock/coluna" ]],
+            "label": "Colunas"
+        }
+    ],
+    "children": [
+        {
+            "path": "coluna/"
+        }
+    ]
+}

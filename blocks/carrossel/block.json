@@ -1,0 +1,24 @@
+{
+    "slug": "carrossel",
+    "title": "Carrossel",
+    "desc": "Imagens",
+    "icon": " bi bi-code-square",
+    "categ": "cfblock",
+    "attrs": {
+        "images": {
+            "type": "array"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Imagens"
+        },
+        {
+            "tag": "input",
+            "type": "gallery",
+            "attr": "images",
+            "label": "Imagens"
+        }
+    ]
+}

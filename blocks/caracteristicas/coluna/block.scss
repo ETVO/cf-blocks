@@ -1,0 +1,16 @@
+@import './caracteristica/block.scss';
+
+.cf-coluna {
+    .coluna-title > * {
+        color: #10109E;
+        font-weight: 600;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .cf-coluna {
+        .coluna-inner {
+            margin: 0 !important;
+        }
+    }
+}
