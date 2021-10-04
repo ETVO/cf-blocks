@@ -1,0 +1,93 @@
+.cf-present {
+    background-color: #E4E6EC;
+    .container {
+        padding-top: 55px;
+        padding-bottom: 55px;
+
+        .title {
+            padding: 0;
+            
+            h1, h2, h3 {
+                color: #10109E;
+                font-weight: 600;
+                overflow-wrap: break-word;
+            }
+        }
+
+        .description {
+            // font-size: .9rem;
+            color: #4C516F;
+            
+            margin: 0;
+            padding: 0;
+
+            margin-left: 50px;
+            padding-left: 50px;
+            border-left: solid 2px #E5E7ED;
+        }
+    }
+
+    .contacts {
+        .list-item {
+            .icon {
+                background: -webkit-linear-gradient(270deg, #FFC038, #FF6D13);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .text {
+                color: #4C516F;
+                font-size: .875rem;
+
+                transition: color .2s;
+
+                &:hover, &:active, &:focus {
+                    color: #10109E;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:991.99px) {
+    .cf-present {
+        .container {
+            .description {
+                border: none;
+                margin: 0;
+                padding: 0;
+
+                margin-top: 1rem !important;
+            }
+        }
+    }
+}
+
+@media all and (max-width:575.99px) {
+    .cf-present {
+        .container {
+            .title {
+            
+                h1, h2, h3 {
+                    letter-spacing: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:300px) {
+    .cf-present {
+        .container {
+            .title {
+            
+                h1, h2, h3 {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .description {
+                font-size: .9rem;
+            }
+        }
+    }
+}
