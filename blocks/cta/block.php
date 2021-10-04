@@ -15,6 +15,7 @@ function render_block_cta($attributes, $content)
             data-bs-ride="<?php echo ($auto_slide) ? "carousel" : "false" ?>" 
             <?php echo ($auto_slide) ? 'data-bs-interval="'.$interval.'"' : ""; ?>" 
             data-bs-pause="false"
+            data-custom-indicators="false"
             id="<?php echo $block_id; ?>">
 
             <div class="carousel-inner">
