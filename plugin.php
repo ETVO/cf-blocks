@@ -171,13 +171,13 @@ final class CF_Blocks {
      */
     public static function custom_blocks_category($categories, $post) {
         return array_merge(
+            $categories,
             array(
                 array(
                     'slug' => 'cfblock',
                     'title' => __("CF Blocks")
                 )
             ),
-            $categories
         );
     }
 }
