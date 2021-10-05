@@ -1,0 +1,94 @@
+.cf-item {
+
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 70vh;
+    
+    color: white !important;
+
+    .overlay { 
+        background-color: rgba(#000000, .1);
+    }
+
+    .banner-content {
+
+        &:not(.invert-align) { 
+            margin-right: 250px;
+            margin-left: auto;
+        }
+
+        &.invert-align {
+            margin-right: auto;
+            margin-left: 250px;
+        }
+
+        .text {
+            text-shadow: 0px 0px 20px #000000;
+
+            text-align: right;
+            margin-left: auto;
+
+            font-size: calc(1.5rem + 0.9vw);
+        }
+    }
+
+}
+
+@media all and (min-width: 1440px) {
+    
+    
+    .cf-item {
+        .banner-content {
+            &:not(.invert-align) { 
+                margin-right: 20vw;
+            }
+
+            &.invert-align {
+                margin-left: 20vw;
+            }
+        }
+    }
+    
+}
+
+@media all and (min-height: 1024px) {
+    
+    .cf-item {
+        height: 50vh;
+    }
+}
+
+
+@media all and (max-width: 991px) {
+    
+    
+    .cf-item {
+        .banner-content {
+            margin-right: auto !important;
+            margin-left: auto !important;
+
+            .text {
+                font-size: calc(1.75rem + 0.9vw);
+            }
+        }
+    }
+    
+}
+
+
+
+@media all and (max-width: 576px) {
+    
+    
+    .cf-item {
+        .banner-content {
+
+            .text {
+                padding: 0 1rem;
+                font-size: calc(1.75rem + 0.9vw);
+            }
+        }
+    }
+}

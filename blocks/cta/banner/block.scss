@@ -35,7 +35,7 @@
     
             text-shadow: 0px 0px 10px rgba(#000, .6);
             
-            font-size: 70px;
+            font-size: calc(2.5rem + 2vw);
             margin: 0;
         }
     
@@ -97,6 +97,11 @@
         .banner-content {
             margin-right: auto !important;
             margin-left: auto !important;
+
+            .title {
+                
+                font-size: calc(2.5rem + 0.9vw);
+            }
         }
     }
     

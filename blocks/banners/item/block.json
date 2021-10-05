@@ -1,0 +1,38 @@
+{
+    "slug": "item",
+    "title": "(Banners) Item",
+    "desc": "Imagem, título, subtítulo e ação",
+    "icon": " bi bi-code-square",
+    "categ": "cfblock",
+    "attrs": {
+        "text": {
+            "type": "string"
+        },
+        "image": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "text",
+            "label": "Texto",
+            "help": "Deixe em branco para ocultar"
+        },
+        {
+            "tag": "title",
+            "title": "Imagem"
+        },
+        {
+            "tag": "input",
+            "type": "image",
+            "attr": "image",
+            "label": "Imagem de fundo"
+        }
+    ]
+}

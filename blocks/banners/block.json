@@ -1,0 +1,27 @@
+{
+    "slug": "banners",
+    "title": "Banners",
+    "desc": "Carrossel de banners",
+    "icon": " bi bi-code-square",
+    "categ": "cfblock",
+    "usesInner": true,
+    "attrs": {
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "cfblock/item" ],
+            "label": "Itens"
+        }
+    ],
+    "children": [
+        {
+            "path": "item/"
+        }
+    ]
+}

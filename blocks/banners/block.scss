@@ -1,0 +1,100 @@
+@import './item/block.scss';
+
+
+
+.cf-banners {
+    position: relative;
+    .stamp {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        
+        img {
+            height: 120px;
+            width: auto;
+        }
+    }
+
+    .carousel-indicators {
+        button {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: solid 1px white;
+
+            &.active {
+                background-color: white;
+                border: solid 1px #10109E;
+            }
+        }
+    }
+
+    .carousel-control {
+
+        &-prev, 
+        &-next {
+            width: 7.5%;
+
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                
+                font-size: 25px;
+                color: #fff !important;
+                font-family: bootstrap-icons;
+                font-weight: bolder;
+
+                background-image: none;
+            }
+
+            .carousel-control-prev-icon::before {    
+                content: "\f284";         
+            }
+
+            .carousel-control-next-icon::before {
+                content: "\f285"; 
+            }
+
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    .cf-banners {
+
+        .stamp {
+            .container {
+                display: flex;
+                
+                img {
+                    margin: auto;
+                }
+            }
+        }
+        
+
+        .carousel-control {
+
+            &-prev, 
+            &-next {
+                width: unset;
+            }
+        }
+    }   
+}
+
+
+@media all and (max-width: 380px) {
+    .cf-banners {
+        .carousel-control {
+
+            &-prev, 
+            &-next {
+                display: none;
+            }
+        }
+    }   
+}
