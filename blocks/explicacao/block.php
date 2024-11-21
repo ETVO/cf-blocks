@@ -2,8 +2,8 @@
 
 function render_block_explicacao($attributes)
 {
-    $title = $attributes['title'];
-    $text = $attributes['text'];
+    $title = $attributes['title'] ?? '';
+    $text = $attributes['text'] ?? '';
 
     ob_start(); // Start HTML buffering
     ?>

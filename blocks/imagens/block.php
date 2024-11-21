@@ -2,9 +2,9 @@
 
 function render_block_imagens($attributes, $content)
 {
-    $title = $attributes['title'];
-    $subtitle = $attributes['subtitle'];
-    $images = $attributes['images'];
+    $title = $attributes['title'] ?? '';
+    $subtitle = $attributes['subtitle'] ?? '';
+    $images = $attributes['images'] ?? [];
 
     $slides_xl = 3;
     $slides_lg = 2;
@@ -13,6 +13,7 @@ function render_block_imagens($attributes, $content)
     $id = 'cfImagens' . rand(0, 100);
 
     $image_count = count($images);
+    if($image_count === 0) return;
 
     ob_start(); // Start HTML buffering
     ?>
@@ -20,16 +21,20 @@ function render_block_imagens($attributes, $content)
         <section class="cf-imagens pb-5">
             <div class="container col-xl-9 py-5">
                 <div class="heading text-center mb-4">
+                    <?php if($title): ?>
                     <div class="title">
                         <h2>
                             <?php echo $title; ?>
                         </h2>
                     </div>
+                    <?php endif; ?>
+                    <?php if($subtitle): ?>
                     <div class="subtitle">
                         <h5>
                             <?php echo $subtitle; ?>
                         </h5>
                     </div>
+                    <?php endif; ?>
                 </div>
                 <div class="carousel slide" 
                 data-bs-ride="carousel"
@@ -40,12 +45,6 @@ function render_block_imagens($attributes, $content)
                         generate_slider_inner($images, $slides_xl, ':xl');
                         generate_slider_inner($images, $slides_lg, ':lg.xl');
                         generate_slider_inner($images, $slides_xs, '.lg'); 
-                    ?>
-
-                    <?php 
-                        // generate_slider_indicators($id, $image_count, $slides_xl, ':xl');
-                        // generate_slider_indicators($id, $image_count, $slides_lg, ':lg.xl');
-                        // generate_slider_indicators($id, $image_count, $slides_xs, '.lg');
                     ?>
 
                     <div class="controls">
@@ -76,12 +75,12 @@ function generate_slider_inner($images, $slide_count, $bp)
     $matches = []; 
     $start = '';
     preg_match('/:([a-z]{2})*/', $bp, $matches);
-    $start = $matches[1];
+    $start = $matches[1] ?? '';
     
     $matches = []; 
     $stop = '';
     preg_match('/\.([a-z]{2})*/', $bp, $matches);
-    $stop = $matches[1];
+    $stop = $matches[1] ?? '';
 
     $display_class = '';
 
@@ -142,83 +141,6 @@ function generate_slider_inner($images, $slide_count, $bp)
     }
 
     ?>
-    </div>
-    <?php
-}
-
-
-function generate_slider_indicators($target_id, $image_count, $slide_count, $bp)
-{
-    $matches = []; 
-    $start = '';
-    preg_match('/:([a-z]{2})*/', $bp, $matches);
-    $start = $matches[1];
-    
-    $matches = []; 
-    $stop = '';
-    preg_match('/\.([a-z]{2})*/', $bp, $matches);
-    $stop = $matches[1];
-
-    $display_class = '';
-
-    if(trim($start) != '') {
-        $display_class = "d-toggle";
-        $display_class .= " d-none";
-        $display_class .= " d-$start-block";
-
-        if(trim($stop) != '') {
-            $display_class .= " d-$stop-none";
-        }
-    }
-    else if(trim($stop) != '') {
-        $display_class = "d-toggle";
-        $display_class .= " d-block";
-        $display_class .= " d-$stop-none";
-    }
-
-    ?>
-    <div class="carousel-indicators <?php echo $display_class; ?>">
-        <div class="indicators-wrap">
-            <div class="indicators-inner">
-        
-    <?php
-
-    $each = 0;
-    $slide = 0;
-    for ($i = 0; $i < $image_count; $i++) {
-        if ($each == 0) {
-            ?>
-                <button type="button" 
-                data-bs-target="#<?php echo $target_id; ?>" 
-                data-bs-slide-to="<?php echo $slide; ?>" 
-                class="<?php if ($i == 0) echo "active"; ?>" 
-                aria-current="<?php if ($i == 0) echo "true"; else echo "false"; ?>" 
-                aria-label="Slide <?php echo ($slide + 1); ?>">
-            <?php
-            $slide++;
-        }
-
-
-        if ($each == $slide_count - 1) {
-            $each = 0;
-            ?>
-                </button>
-            <?php
-        } else {
-            $each++;
-        }
-    }
-
-    if ($each > 0) {
-        $each = 0;
-        ?>
-            </button>
-        <?php
-    }
-
-    ?>
-            </div>
-        </div>
     </div>
     <?php
 }

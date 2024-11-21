@@ -1,14 +1,16 @@
 <?php
+
 /**
  * Automatic PHP block initializer based on JSON files
  * 
  * @package WordPress
- * @subpackage GDI-Blocks
+ * @subpackage CF-Blocks
  */
 
-use GDI_Blocks_Registerer as Block_Registerer;
+use CF_Blocks_Registerer as Block_Registerer;
 
-class GDI_Blocks_Registerer {
+class CF_Blocks_Registerer
+{
 
     private $blocks = [];
 
@@ -32,7 +34,8 @@ class GDI_Blocks_Registerer {
      * @param array $array
      * @since 1.0
      */
-    public function set_blocks(array $array) {
+    public function set_blocks(array $array)
+    {
         $this->blocks = $array;
     }
 
@@ -42,7 +45,8 @@ class GDI_Blocks_Registerer {
      * @return array
      * @since 1.0
      */
-    public function get_blocks(): array {
+    public function get_blocks(): array
+    {
         return $this->blocks;
     }
 
@@ -52,7 +56,8 @@ class GDI_Blocks_Registerer {
      * @param string $file_path Path to the JSON file
      * @since 1.0
      */
-    public function set_blocks_from_JSON(string $file_path) {
+    public function set_blocks_from_JSON(string $file_path)
+    {
         $content = file_get_contents(__DIR__ . '/' . $file_path);
         $blocks_data = json_decode($content, true);
         $this->set_blocks($blocks_data['blocks']);
@@ -65,27 +70,34 @@ class GDI_Blocks_Registerer {
      * @param string $path_prefix
      * @since 1.0
      */
-    public function register_blocks(array $blocks, string $path_prefix = "") {
+    public function register_blocks(array $blocks, string $path_prefix = "")
+    {
         $dir = __DIR__ . '/';
 
-        foreach($blocks as $block) {
+        foreach ($blocks as $block) {
 
-            if(substr($path_prefix, -1) !== '/') $path_prefix .= '/';
+            if (substr($path_prefix, -1) !== '/') $path_prefix .= '/';
 
             $path = $block["path"];
-            
+
+
             $block_data = file_get_contents($dir . $path_prefix . $path . '/block.json');
             $block_data = json_decode($block_data, true);
-            
+
+            // Move along if essential stuff isn't defined
+            if (!isset($block_data['slug']) || !isset($block_data['categ'])) {
+                echo "skipping over $path; ";
+                continue;
+            }
             $slug = $block_data['slug'];
             $categ = $block_data['categ'];
-            $render_callback = $block_data["renderCallback"];
-            $children = $block_data["children"];
+            $render_callback = $block_data["renderCallback"] ?? null;
+            $children = $block_data["children"] ?? null;
 
             $this->register_block($slug, $categ, $path_prefix . $path, $render_callback);
 
-            if($children !== NULL && count($children) > 0) {
-                $this->register_blocks($block_data["children"], $path_prefix . $path );
+            if ($children !== NULL && count($children) > 0) {
+                $this->register_blocks($block_data["children"], $path_prefix . $path);
             }
         }
     }
@@ -99,10 +111,11 @@ class GDI_Blocks_Registerer {
      * @param string $render_callback
      * @since 1.0
      */
-    private function register_block(string $slug, string $categ, string $path, string $render_callback = NULL) {
+    private function register_block(string $slug, string $categ, string $path, string $render_callback = NULL)
+    {
         $slug = str_replace('-', '_', $slug);
 
-        if($render_callback === NULL)
+        if ($render_callback === NULL)
             $render_callback = 'render_block_' . $slug;
 
         register_block_type(
@@ -111,11 +124,9 @@ class GDI_Blocks_Registerer {
                 'render_callback' => $render_callback
             )
         );
-        
+
         include __DIR__ . '/' . $path . '/block.php';
     }
-
-
 }
 
 new Block_Registerer();

@@ -2,9 +2,9 @@
 
 function render_block_present($attributes, $content)
 {
-    $title = $attributes['title'];
-    $description = $attributes['description'];
-    $showContacts = $attributes['showContacts'];
+    $title = $attributes['title'] ?? null;
+    $description = $attributes['description'] ?? null;
+    $showContacts = $attributes['showContacts'] ?? false;
 
     if($showContacts){
         // Phone
